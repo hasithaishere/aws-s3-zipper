@@ -306,12 +306,10 @@ S3Zipper.prototype = {
                         zipFileLocation: result.Location,
                         zippedFiles: r.zippedFiles
                     });
-                    fs.unlink(params.zipFileName);
                 });
             }
             else {
                 console.log('no files zipped. nothing to upload');
-                fs.unlink(params.zipFileName);
                 callback(null, {
                     zipFileETag: null,
                     zipFileLocation: null,
